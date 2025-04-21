@@ -1,0 +1,25 @@
+name: "churn_analytics_system"
+
+services:
+  datamart:
+    build:
+      context: ./datamart
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: h@rd_p@ssw0rd
+      POSTGRES_DB: analytics
+    ports:
+      - "5432:5432"
+    volumes:
+      - datamart_data:/var/lib/postgresql/data
+      - ./data:/data
+  dashboard:
+    build: 
+      context: ./dashboard
+    ports:
+      - "8888:8888"
+    depends_on:
+      - datamart
+
+volumes:
+  datamart_data:
