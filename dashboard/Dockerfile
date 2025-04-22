@@ -10,5 +10,6 @@ WORKDIR /app
 COPY main.py .
 COPY models ./models
 COPY src ./src
+COPY assets ./assets
 
 CMD ["python3", "main.py"]

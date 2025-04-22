@@ -31,7 +31,7 @@ COPY churn_data(
 FROM '/docker-entrypoint-initdb.d/data.csv'
 DELIMITER ',' CSV HEADER;
 
-CREATE ROLE readonly_user WITH LOGIN PASSWORD 're@d0nly_p@ssw0rd';
+CREATE ROLE readonly_user WITH LOGIN PASSWORD 'read0nly_passw0rd';
 GRANT CONNECT ON DATABASE analytics TO readonly_user;
 GRANT USAGE ON SCHEMA public TO readonly_user;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly_user;
