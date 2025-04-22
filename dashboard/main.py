@@ -35,7 +35,7 @@ def load_data():
 app.layout = html.Div([
     dcc.Interval(
         id='interval-component',
-        interval=5 * 1000,
+        interval=20 * 60 * 1000,
         n_intervals=0
     ),
 
