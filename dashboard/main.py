@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import torch
 from dash import Input, Output, dash_table, dcc, html
 from sqlalchemy import create_engine
 
@@ -245,6 +246,11 @@ def update_feature_importance(json_data):
                  labels={'x': 'Importance', 'y': 'Feature'})
 
     return fig
+
+
+def augment_data(row_count) -> np.ndarray:
+    model = torch.load('models/augment_model.pth')
+    return model.generate_from_random(row_count)
 
 
 if __name__ == '__main__':
