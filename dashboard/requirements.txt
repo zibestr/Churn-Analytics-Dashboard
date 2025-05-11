@@ -1,6 +1,0 @@
-dash>=3.0.3
-sqlalchemy
-numpy<2
-torch
-pandas>=2.2.3
-psycopg2-binary

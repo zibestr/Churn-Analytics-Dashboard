@@ -1,32 +1,27 @@
-name: "churn_analytics_system"
+version: '3.8'
 
 services:
-  datamart:
-    build:
-      context: ./datamart
-    environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: h@rd_p@ssw0rd
-      POSTGRES_DB: analytics
+  api:
+    build: ./api
     ports:
-      - "5432:5432"
-    networks:
-      - data_network
+      - "8000:8000"
     volumes:
-      - datamart_data:/var/lib/postgresql/data
-      - ./data:/data
-  dashboard:
-    build: 
-      context: ./dashboard
-    ports:
-      - "8888:8888"
+      - ./api/models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
     networks:
-      - data_network
-    depends_on:
-      - datamart
+      - survival-net
 
-volumes:
-  datamart_data:
+  web:
+    build: ./web
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://api:8000/predict
+    networks:
+      - survival-net
 
 networks:
-  data_network:
+  survival-net:
