@@ -45,7 +45,7 @@ def main():
 
     st.success(f"Loaded {len(data)} records")
 
-    selected_day = st.slider("Select prediction tenure in month", 1, 80, 1)
+    selected_day = st.slider("Select prediction tenure in month", 1, 72, 1)
 
     if st.button("Calculate Survival Probabilities"):
         with st.spinner("Processing..."):

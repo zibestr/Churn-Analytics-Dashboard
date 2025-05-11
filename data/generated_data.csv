@@ -1,0 +1,11 @@
+MonthlyCharges,TotalCharges,gender,SeniorCitizen,Partner,Dependents,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,PaperlessBilling,PaymentMethod,customerID
+64.68964385986328,2287.4482421875,Female,0,No,No,Yes,non,non,No,non,non,No,non,non,Month-to-month,Yes,non,3199-OWKT
+64.5923843383789,2304.147705078125,Female,0,No,No,Yes,non,non,No,non,non,No,non,non,Month-to-month,Yes,non,7969-LTTH
+64.72174072265625,2294.48876953125,Female,0,No,No,Yes,non,non,No,non,non,non,non,non,Month-to-month,Yes,non,3830-XZXT
+64.37654113769531,2316.773681640625,Female,0,No,No,Yes,non,non,No,non,non,No,non,non,Month-to-month,Yes,non,4605-AFYN
+64.71818542480469,2303.0859375,Female,0,No,No,Yes,non,non,No,non,non,No,non,non,Month-to-month,Yes,non,9382-OBLT
+64.67354583740234,2310.4033203125,Female,0,No,No,Yes,non,non,No,non,non,non,non,non,Month-to-month,Yes,non,5216-BXCP
+64.5678939819336,2312.20947265625,Female,0,No,No,Yes,non,non,No,non,non,non,non,non,Month-to-month,Yes,non,4491-RJAH
+64.67447662353516,2325.31884765625,Female,0,No,No,Yes,non,non,No,non,non,non,non,non,Month-to-month,Yes,non,0168-HGVR
+64.92634582519531,2312.147705078125,Female,0,No,No,Yes,non,non,No,non,non,non,non,non,Month-to-month,Yes,non,1355-LQQS
+64.8483657836914,2310.83154296875,Female,0,No,No,Yes,non,non,No,non,non,No,non,non,Month-to-month,Yes,non,3107-QHTQ
